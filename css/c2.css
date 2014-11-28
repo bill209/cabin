@@ -65,8 +65,12 @@ a.logo_wrapper  {
 }
 
 ul#tour {
-	padding: 20px;
+	float: left;
+	width: 150px;
+	height: 300px;
+	padding: 0;
 }
+
 ul: target {
 	margin-left: 100px;
 }
@@ -87,7 +91,7 @@ ul#tour li {
 	height: 80px;
 	text-align: center;
 	line-height:  80px;
-	margin: 20px 0px 0px 0px;
+	margin: 0px 0px 20px 0px;
 	color: #333;
 	font-size: 20px;
 
@@ -353,3 +357,85 @@ ul.sub-menu li.current-menu-ancestor  ul.sub-menu li, ul.sub-menu li.current-men
 	border-top: 0px solid #eeeeee;
 }
 
+
+/* -----------------------------------------------------------------------------  slideshow */
+
+#slides {
+      display: none
+    }
+
+    /* Center the slideshow */
+    .container {
+    	float: left;
+      width: 500px;
+    }
+
+    /* Show active item in the pagination */
+    .slidesjs-pagination .active {
+      color:red;
+    }
+
+    a.slidesjs-navigation { color: #333; }
+
+    /* Media quires for a responsive layout */
+
+    /* For tablets & smart phones */
+    @media (max-width: 767px) {
+      body {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .container {
+        width: auto
+      }
+    }
+
+    /* For smartphones */
+    @media (max-width: 480px) {
+      .container {
+        width: auto
+      }
+    }
+
+    /* For smaller displays like laptops */
+    @media (min-width: 768px) and (max-width: 979px) {
+      .container {
+        width: 724px
+      }
+    }
+
+    /* For larger displays */
+    @media (min-width: 1200px) {
+      .container {
+        width: 1170px
+      }
+    }
+
+.slidesjs-pagination {
+    margin:6px 0 0;
+    float: right;
+    list-style: none;
+}
+
+.slidesjs-pagination li {
+    float: left;
+    margin: 0 1px;
+}
+
+.slidesjs-pagination li a {
+    display: block;
+    width: 13px;
+    height: 0;
+    padding-top: 13px;
+    background-image: url(../img/pagination.png);
+    background-position: 0 0;
+    float: left;
+    overflow: hidden;
+}
+
+.slidesjs-pagination li a.active, .slidesjs-pagination li a:hover.active { background-position: 0 -13px }
+
+.slidesjs-pagination li a:hover { background-position: 0 -26px }
+
+
+/* end slideshow */

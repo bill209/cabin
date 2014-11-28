@@ -71,6 +71,32 @@ console.log('^-st: ',st);
 	}
 });
 
+
+// slideshow
+$(function() {
+	$('#slides').slidesjs({
+		width: 400,
+		height: 300,
+		navigation: {
+			active: false,
+			effect: "fade"
+		},
+		pagination: {
+			effect: "fade"
+		},
+		effect: {
+			fade: {
+				speed: 400
+			}
+		},
+		callback: {
+			loaded: function(number) {
+				$(".slidesjs-container").css("height", '300');
+			}
+		}
+	});
+});
+
 // window.onresize = function(event) {
 // 	page_height = $(window).height();
 // };
